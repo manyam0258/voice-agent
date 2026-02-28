@@ -398,14 +398,12 @@ async def entrypoint(ctx: JobContext) -> None:
             api_key=OPENAI_API_KEY,
         ),
 
-        # Text-to-Speech: OpenAI TTS — reliable fallback, works on all paid plans
-        # Switch back to ElevenLabs once quota/plan is confirmed working
+        # Text-to-Speech: OpenAI TTS
         # Available voices: alloy, echo, fable, onyx, nova, shimmer
-        # "nova" and "shimmer" are best for warm, conversational tone
         tts=openai.TTS(
             api_key=OPENAI_API_KEY,
-            voice="nova",        # warm, clear female voice — good for sales
-            model="tts-1",       # tts-1 = lowest latency, tts-1-hd = higher quality
+            voice="nova",
+            model="tts-1",
         ),
 
         # Voice Activity Detection: Silero (configured above)
