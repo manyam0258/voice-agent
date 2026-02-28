@@ -1,0 +1,40 @@
+# =============================================================================
+# Git Ignore — files that must NEVER be committed to version control
+# =============================================================================
+
+# Environment variables (contains all your API keys — keep this secret!)
+.env
+.env.local
+.env.production
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment directories
+venv/
+.venv/
+env/
+ENV/
+
+# Python packaging artifacts
+*.egg-info/
+dist/
+build/
+
+# IDE / editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs (if you redirect stdout to a file)
+*.log
+logs/
+
+# pytest cache
+.pytest_cache/

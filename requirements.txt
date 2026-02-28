@@ -1,0 +1,22 @@
+# =============================================================================
+# Voice Agent Dependencies
+# =============================================================================
+# Install with: pip install -r requirements.txt
+
+# LiveKit Agents framework + all required plugins
+livekit-agents[deepgram,elevenlabs,openai,silero]>=0.12.0
+
+# LiveKit core (WebRTC rooms, SIP bridge communication)
+livekit>=0.17.0
+
+# Supabase Python client (REST API + auth)
+supabase>=2.4.0
+
+# Twilio SDK — used for webhook request validation (security)
+twilio>=9.0.0
+
+# Environment variable loading from .env file
+python-dotenv>=1.0.0
+
+# Async HTTP client (used internally by supabase-py)
+httpx>=0.27.0
