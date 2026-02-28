@@ -1,22 +1,29 @@
 # =============================================================================
-# Voice Agent Dependencies
+# Tridasa Rise Voice Agent — Python Dependencies
 # =============================================================================
-# Install with: pip install -r requirements.txt
+# Install: pip install -r requirements.txt
+#
+# This project requires LiveKit Agents >= 1.0 (released April 2025).
+# The old VoicePipelineAgent (v0.x) does not exist in v1.x.
+# If you see "cannot import VoicePipelineAgent", your agent.py is outdated
+# — use the regenerated agent.py from this project.
+# =============================================================================
 
-# LiveKit Agents framework + all required plugins
-livekit-agents[deepgram,elevenlabs,openai,silero]>=0.12.0
+# LiveKit Agents v1.x core + all required plugins in one install
+# [deepgram] = STT plugin
+# [elevenlabs] = TTS plugin
+# [openai] = LLM plugin
+# [silero] = VAD plugin
+livekit-agents[deepgram,elevenlabs,openai,silero]>=1.0.0,<2.0.0
 
-# LiveKit core (WebRTC rooms, SIP bridge communication)
-livekit>=0.17.0
-
-# Supabase Python client (REST API + auth)
+# Supabase Python client — for call log storage
 supabase>=2.4.0
 
-# Twilio SDK — used for webhook request validation (security)
-twilio>=9.0.0
-
-# Environment variable loading from .env file
+# Load .env variables at startup
 python-dotenv>=1.0.0
+
+# Twilio SDK — used only for webhook request validation (security)
+twilio>=9.0.0
 
 # Async HTTP client (used internally by supabase-py)
 httpx>=0.27.0
